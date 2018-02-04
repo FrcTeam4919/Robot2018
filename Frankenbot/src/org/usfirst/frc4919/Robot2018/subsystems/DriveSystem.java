@@ -59,12 +59,36 @@ public class DriveSystem extends Subsystem {
     public void periodic() {
         // Put code here to be run every loop
     	Joystick joystick=Robot.oi.getJoystick1();
-    	mecanumDrive1.driveCartesian(joystick.getY(),joystick.getX(),joystick.getZ());
+    	double y = joystick.getY();
+    	double x = joystick.getX();
+    	double z = joystick.getZ();
+    	y = correctErrors (y);
+    	x = correctErrors (x);
+    	z = correctErrors (z);
+    	mecanumDrive1.driveCartesian(y,x,z);
     	
+    }
+    
+    public double correctErrors(double value) {
+    	if (Math.abs(value) <0.3){
+    	 value = 0;
+    	}
+    	return value;
     }
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-
+    
+    public void moveforward() {
+    	mecanumDrive1.drivePolar(.5, 0, 0);
+    }
+    
+    public void movebackwards() {
+    	mecanumDrive1.drivePolar(-.5, 0, 0);
+    }
+    
+    public void stop() {
+    	mecanumDrive1.drivePolar(0.0, 0.0, 0.0);
+    }
 }
 

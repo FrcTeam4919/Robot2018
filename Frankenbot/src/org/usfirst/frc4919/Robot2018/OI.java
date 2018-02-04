@@ -87,7 +87,7 @@ public class OI {
         liftArmButton.whenReleased(new LiftArm().finish());
 
         // SmartDashboard Buttons
-        SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
+        SmartDashboard.putData("Autonomous Command", new MoveToSwitch());
         SmartDashboard.putData("Lift Arm", new LiftArm());
         SmartDashboard.putData("Lower Arm", new LowerArm());
         SmartDashboard.putData("Clamp", new Clamp());

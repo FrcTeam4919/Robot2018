@@ -49,10 +49,10 @@ public class RobotMap {
         driveSystemSpeedController1.setInverted(false);
         driveSystemSpeedController2 = new VictorSP(2);
         LiveWindow.addActuator("DriveSystem", "Speed Controller 2", (VictorSP) driveSystemSpeedController2);
-        driveSystemSpeedController2.setInverted(false);
+        driveSystemSpeedController2.setInverted(true);
         driveSystemSpeedController3 = new VictorSP(3);
         LiveWindow.addActuator("DriveSystem", "Speed Controller 3", (VictorSP) driveSystemSpeedController3);
-        driveSystemSpeedController3.setInverted(false);
+        driveSystemSpeedController3.setInverted(true);
         driveSystemSpeedController4 = new VictorSP(4);
         LiveWindow.addActuator("DriveSystem", "Speed Controller 4", (VictorSP) driveSystemSpeedController4);
         driveSystemSpeedController4.setInverted(false);
