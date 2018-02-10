@@ -8,8 +8,8 @@ public class Autonomous extends CommandGroup {
 		addParallel(new MoveToSwitch());
 		addSequential(new LiftCube());
 		
-		//Turn to face scale
-		//Move closer to scale
+		//Turn to face scale/switch
+		//Move closer to scale/switch
 		//Drop cube
 		
 	}

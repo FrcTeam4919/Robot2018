@@ -2,6 +2,7 @@ package org.usfirst.frc4919.Robot2018.commands;
 
 import org.usfirst.frc4919.Robot2018.Robot;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class LiftCube extends Command {
@@ -16,6 +17,7 @@ public class LiftCube extends Command {
 	}
 
 protected void initialize() {
+	Timer.delay(3);
 	setTimeout(1);
 	
 }

@@ -37,6 +37,7 @@ public class RobotMap {
     public static MecanumDrive driveSystemMecanumDrive1;
     public static Compressor pneumaticClampCompressor1;
     public static DoubleSolenoid pneumaticClampDoubleSolenoid1;
+    public static DoubleSolenoid pneumaticClampDoubleSolenoid2;
     public static SpeedController winchSpeedControllerWinch;
     public static SpeedController armMotorSpeedControllerArmMotor;
 
@@ -64,12 +65,15 @@ public class RobotMap {
         driveSystemMecanumDrive1.setMaxOutput(1.0);
 
         //TODO: Add in when the compressor is connected
-//        pneumaticClampCompressor1 = new Compressor(0);
-//        LiveWindow.addActuator("PneumaticClamp", "Compressor 1", pneumaticClampCompressor1);
+    //    pneumaticClampCompressor1 = new Compressor(0);
+      //  LiveWindow.addActuator("PneumaticClamp", "Compressor 1", pneumaticClampCompressor1);
         
         //TODO: Add in when the solendoid is connected
-//        pneumaticClampDoubleSolenoid1 = new DoubleSolenoid(0, 2, 3);
-//        LiveWindow.addActuator("PneumaticClamp", "Double Solenoid 1", pneumaticClampDoubleSolenoid1);
+        pneumaticClampDoubleSolenoid1 = new DoubleSolenoid(0, 2, 3);
+        LiveWindow.addActuator("PneumaticClamp", "Double Solenoid 1", pneumaticClampDoubleSolenoid1);
+        
+        pneumaticClampDoubleSolenoid2 = new DoubleSolenoid(0, 2, 3);
+        LiveWindow.addActuator("PneumaticTower", "Double Solenoid 2", pneumaticClampDoubleSolenoid2);
         
         winchSpeedControllerWinch = new Spark(5);
         LiveWindow.addActuator("Winch", "Speed Controller Winch", (Spark) winchSpeedControllerWinch);

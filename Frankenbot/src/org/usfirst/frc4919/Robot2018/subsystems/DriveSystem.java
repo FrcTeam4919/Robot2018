@@ -70,7 +70,7 @@ public class DriveSystem extends Subsystem {
     }
     
     public double correctErrors(double value) {
-    	if (Math.abs(value) <0.3){
+    	if (Math.abs(value) <0.2){
     	 value = 0;
     	}
     	return value;

@@ -19,7 +19,7 @@ public class WinchStop extends Command {
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
-		System.out.println("WinchLift off...");
+		//System.out.println("WinchLift off...");
 
 		Robot.winch.winchStop();
 	}
