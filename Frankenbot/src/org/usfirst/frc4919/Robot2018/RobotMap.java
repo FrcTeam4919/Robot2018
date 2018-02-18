@@ -69,11 +69,11 @@ public class RobotMap {
       //  LiveWindow.addActuator("PneumaticClamp", "Compressor 1", pneumaticClampCompressor1);
         
         //TODO: Add in when the solendoid is connected
-        pneumaticClampDoubleSolenoid1 = new DoubleSolenoid(0, 2, 3);
-        LiveWindow.addActuator("PneumaticClamp", "Double Solenoid 1", pneumaticClampDoubleSolenoid1);
+   //     pneumaticClampDoubleSolenoid1 = new DoubleSolenoid(0, 2, 3);
+   //     LiveWindow.addActuator("PneumaticClamp", "Double Solenoid 1", pneumaticClampDoubleSolenoid1);
         
-        pneumaticClampDoubleSolenoid2 = new DoubleSolenoid(0, 2, 3);
-        LiveWindow.addActuator("PneumaticTower", "Double Solenoid 2", pneumaticClampDoubleSolenoid2);
+   //     pneumaticClampDoubleSolenoid2 = new DoubleSolenoid(0, 2, 3);
+  //      LiveWindow.addActuator("PneumaticTower", "Double Solenoid 2", pneumaticClampDoubleSolenoid2);
         
         winchSpeedControllerWinch = new Spark(5);
         LiveWindow.addActuator("Winch", "Speed Controller Winch", (Spark) winchSpeedControllerWinch);
