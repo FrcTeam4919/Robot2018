@@ -16,6 +16,7 @@ import org.usfirst.frc4919.Robot2018.subsystems.*;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -105,8 +106,28 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousInit() {
         autonomousCommand = chooser.getSelected();
+       
+        String gameData;
+        gameData = DriverStation.getInstance().getGameSpecificMessage();
+        
+        if(gameData.length() > 0)
+        {
+        	if(gameData.charAt(0) == 'L')
+        	{
+        		//put left code here
+        		System.out.println("moving left");
+        	
+        	} else {
+        		//right code here
+        		System.out.println("moving right");
+        	}
+        		
+
+        
         // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
+        }
+    
     }
 
     /**
