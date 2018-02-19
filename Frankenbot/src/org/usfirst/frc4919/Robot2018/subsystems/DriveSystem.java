@@ -79,16 +79,34 @@ public class DriveSystem extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     
-    public void moveforward() {
+    public void moveForward() {
     	mecanumDrive1.drivePolar(.5, 0, 0);
     }
     
-    public void movebackwards() {
+    public void moveRight() {
+    	mecanumDrive1.drivePolar(.5,90,0);
+    }
+    
+    public void moveLeft() {
+    	mecanumDrive1.drivePolar(.5,-90,0);
+    }
+    
+    public void moveBackwards() {
     	mecanumDrive1.drivePolar(-.5, 0, 0);
+    }
+    
+    public void moveForwardRightDiagonal() {
+    	mecanumDrive1.drivePolar(.5, 45, 0);
+    }
+    
+    public void moveForwardLeftDiagonal() {
+    	mecanumDrive1.drivePolar(.5, -45, 0);
     }
     
     public void stop() {
     	mecanumDrive1.drivePolar(0.0, 0.0, 0.0);
     }
+    
+    
 }
 
