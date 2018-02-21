@@ -13,7 +13,7 @@ public class CenterMoveToRightSwitch extends Command {
 	requires(Robot.driveSystem);
 	}@Override
 	 protected void initialize() {
-    	setTimeout(5.0);
+    	setTimeout(2.0);
     }
 
     // Called repeatedly when this Command is scheduled to run

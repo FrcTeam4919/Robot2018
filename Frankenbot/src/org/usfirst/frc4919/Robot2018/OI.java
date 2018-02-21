@@ -80,24 +80,24 @@ public class OI {
         clampButton = new JoystickButton(joystick2, 6);
         clampButton.whileHeld(new Clamp());
         clampButton.whenReleased(new Clamp().stop());
-        leanAndLift = new JoystickButton(joystick2, 5);
-        leanAndLift.whenPressed(new LeanAndLift());
-        leanAndLower = new JoystickButton(joystick2, 4);
-        leanAndLower.whenPressed(new LowerAndLean());
+      //  leanAndLift = new JoystickButton(joystick2, 5);
+      //  leanAndLift.whenPressed(new LeanAndLift());
+      //  leanAndLower = new JoystickButton(joystick2, 4);
+      //  leanAndLower.whenPressed(new LowerAndLean());
         
         
-      //  leanBackward = new JoystickButton(joystick2, 10);
-      //  leanBackward.whileHeld(new LeanBackward());
-      //  leanBackward.whenReleased(new LeanBackward().stop());
-//        leanForward = new JoystickButton(joystick2, 11);
-//        leanForward.whileHeld(new LeanForward());
-//        leanForward.whenReleased(new LeanForward().stop());
-//        lowerArmButton = new JoystickButton(joystick2, 4);
-//        lowerArmButton.whileHeld(new LowerArm());
-//        lowerArmButton.whenReleased(new LowerArm().finish());
-      //  liftArmButton = new JoystickButton(joystick2, 5);
-      //  liftArmButton.whileHeld(new LiftArm());
-      //  liftArmButton.whenReleased(new LiftArm().finish());
+        leanBackward = new JoystickButton(joystick2, 10);
+        leanBackward.whileHeld(new LeanBackward());
+        leanBackward.whenReleased(new LeanBackward().stop());
+        leanForward = new JoystickButton(joystick2, 11);
+        leanForward.whileHeld(new LeanForward());
+        leanForward.whenReleased(new LeanForward().stop());
+        lowerArmButton = new JoystickButton(joystick2, 4);
+        lowerArmButton.whileHeld(new LowerArm());
+        lowerArmButton.whenReleased(new LowerArm().finish());
+        liftArmButton = new JoystickButton(joystick2, 5);
+        liftArmButton.whileHeld(new LiftArm());
+        liftArmButton.whenReleased(new LiftArm().finish());
 
         // SmartDashboard Buttons
 //        SmartDashboard.putData("Center", new CenterAutonomous());

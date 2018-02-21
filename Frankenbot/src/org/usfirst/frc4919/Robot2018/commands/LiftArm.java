@@ -40,19 +40,19 @@ public class LiftArm extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-    	setTimeout(2.0);
+    	Robot.armMotor.liftArm();
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	Robot.armMotor.liftArm();
+    	//setTimeout(4.0);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return this.isTimedOut();
+        return isFinished;
     }
 
     // Called once after isFinished returns true

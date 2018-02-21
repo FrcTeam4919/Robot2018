@@ -57,10 +57,10 @@ public class ArmMotor extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     public void lowerArm(){
-    	speedControllerArmMotor.set(-1.0);
+    	speedControllerArmMotor.set(-0.3);
     }
     public void liftArm(){
-    	speedControllerArmMotor.set(1.0);
+    	speedControllerArmMotor.set(0.5);
     
     }
     public void armStop(){

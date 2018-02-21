@@ -38,14 +38,14 @@ public class CenterMoveToLeftSwitch extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-    	setTimeout(5.0);
+    	setTimeout(2.0);
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
     	System.out.println("Center Autonomus");
-    	Robot.driveSystem.moveForward();
+    	Robot.driveSystem.moveForwardLeftDiagonal();
     }
 
     // Make this return true when this Command no longer needs to run execute()

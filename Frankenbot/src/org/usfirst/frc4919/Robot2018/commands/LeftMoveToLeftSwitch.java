@@ -28,13 +28,13 @@ public class LeftMoveToLeftSwitch extends Command {
     @Override
     protected void initialize() {
     	System.out.println("Left Autonomus");
-    	setTimeout(5.0);
+    	setTimeout(2.0);
     }
-
+// ---IMPORTANT------Used with robot sideways facing the right (from drive pit perspective)--IMPORTANT!!!
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	Robot.driveSystem.moveForward();
+    	Robot.driveSystem.moveSideways();
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -65,6 +65,9 @@ public class DriveSystem extends Subsystem {
     	y = correctErrors (y);
     	x = correctErrors (x);
     	z = correctErrors (z);
+    	
+    	x = x * -1;
+    	z = z * -1;
     	mecanumDrive1.driveCartesian(y,x,z);
     	
     }
@@ -102,10 +105,15 @@ public class DriveSystem extends Subsystem {
     public void moveForwardLeftDiagonal() {
     	mecanumDrive1.drivePolar(.5, -45, 0);
     }
+   
+    public void moveSideways() {
+    	mecanumDrive1.drivePolar(.5, -90, 0);
+    }
     
     public void stop() {
     	mecanumDrive1.drivePolar(0.0, 0.0, 0.0);
     }
+    
     
     
 }
